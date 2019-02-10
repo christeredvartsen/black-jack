@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RestartGame /> matches snapshot 1`] = `
+<button
+  onClick={[MockFunction]}
+>
+  Restart game
+</button>
+`;

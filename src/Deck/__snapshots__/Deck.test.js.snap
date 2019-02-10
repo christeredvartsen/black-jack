@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Deck /> matches snapshot 1`] = `
+<p>
+  There are 
+  3
+   cards left in the deck.
+</p>
+`;

@@ -1,0 +1,63 @@
+version: 2
+
+jobs:
+    build:
+        docker:
+            - image: circleci/node:8
+
+        working_directory: ~/black-jack
+
+        branches:
+            ignore:
+                - gh-pages
+
+        steps:
+            - checkout
+
+            - restore_cache:
+                keys:
+                    - v1-dependencies-{{ checksum "package.json" }}
+                    - v1-dependencies-
+
+            - run:
+                name: Install dependencies
+                command: yarn install
+
+            - save_cache:
+                paths:
+                    - node_modules
+                key: v1-dependencies-{{ checksum "package.json" }}
+
+            - run:
+                name: Run tests
+                command: yarn test --coverage
+
+            - store_artifacts:
+                path: coverage
+
+            - deploy:
+                name: Deploy build to GitHub pages
+                command: |
+                    if [ $CIRCLE_BRANCH == "master" ]; then
+                        yarn build
+
+                        git config --global user.email "cogo@starzinger.net"
+                        git config --global user.name "CircleCI (on behalf of Christer Edvartsen)"
+
+                        dirname="__pages__"
+
+                        git clone $CIRCLE_REPOSITORY_URL $dirname
+
+                        cd $dirname
+                        git checkout gh-pages || git checkout --orphan gh-pages
+                        git rm -rf .
+                        cd ..
+
+                        cp -a .circleci build/. $dirname/.
+                        cd $dirname
+
+                        git add -A
+                        git commit -m "Deployment to GitHub Pages from CircleCI: ${CIRCLE_SHA1}" --allow-empty
+
+                        git push origin gh-pages
+                    fi

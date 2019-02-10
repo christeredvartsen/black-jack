@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Board /> matches snapshot 1`] = `
+<div>
+  <Deck
+    cards={Array []}
+  />
+  <GameResult
+    p1="name1"
+    p2="name2"
+    result="player 1 wins"
+  />
+  <div
+    className="players"
+  >
+    <Player
+      cards={Array []}
+      draw={false}
+      drawCard={[Function]}
+      name="name1"
+      score={0}
+    />
+    <Player
+      cards={Array []}
+      draw={false}
+      drawCard={[Function]}
+      name="name2"
+      score={0}
+    />
+  </div>
+  <RestartGame
+    reset={[MockFunction]}
+  />
+</div>
+`;

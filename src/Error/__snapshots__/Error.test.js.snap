@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Error /> matches snapshot 1`] = `
+<Fragment>
+  <p>
+    An error occurred: 
+    <span
+      className="errorMessage"
+    >
+      some error message
+    </span>
+    .
+  </p>
+  <RestartGame
+    reset={[MockFunction]}
+  />
+</Fragment>
+`;

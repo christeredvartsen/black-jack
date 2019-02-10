@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Player /> matches snapshot 1`] = `
+<fieldset
+  className="player"
+>
+  <legend>
+    Some name
+  </legend>
+  <dl>
+    <dt>
+      Score
+    </dt>
+    <dd
+      className="playerScore"
+    >
+      0
+    </dd>
+    <dt>
+      Cards
+    </dt>
+    <dd
+      className="playerCards"
+    >
+      <ol>
+        <li
+          key="10H"
+        >
+          10H
+        </li>
+        <li
+          key="AH"
+        >
+          AH
+        </li>
+        <li
+          key="AS"
+        >
+          AS
+        </li>
+      </ol>
+    </dd>
+  </dl>
+  <button
+    onClick={[MockFunction]}
+  >
+    Draw
+  </button>
+</fieldset>
+`;
