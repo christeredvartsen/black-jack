@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/black-jack/static/css/main.ae3562f1.chunk.css"
   },
   {
-    "revision": "6ff3d2c2d3f6a77653e7fcfb30f2fe1b",
+    "revision": "bd5f394bcbdbcd0477ff24b94ae446c4",
     "url": "/black-jack/index.html"
   }
 ];
