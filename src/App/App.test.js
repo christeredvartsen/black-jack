@@ -8,56 +8,6 @@ import App from './App';
 import { gameState as s } from '../utils';
 
 describe('<App />', () => {
-  /*
-  each([
-    [
-      // Player 1 wins
-      [
-        { suit: 'HEARTS', value: 'A' },
-        { suit: 'HEARTS', value: 'K' },
-        { suit: 'HEARTS', value: '2' },
-        { suit: 'HEARTS', value: '3' },
-      ],
-      'foo',
-    ],
-    // Player 2 wins
-    //[],
-  
-    // Both win
-    //[],
-  
-    // Both lose
-    //[],
-  ]).test('can play a game', async (deck, resultMessage) => {
-    mockAxios.get.mockImplementationOnce(() => Promise.resolve({
-      data: deck,
-    }));
-    nock.disableNetConnect();
-    nock(DECK_URL)
-    .get('/shuffle')
-    .reply(200, deck);
-    
-    const app = mount(<App />);
-    //console.log(app.state('deck'));
-    await waitUntil(() => app.state('deck').length !== 0);
-    // c
-    console.log(app.text());
-    
-    // expect(mockAxios.get).toHaveBeenCalledTimes(1);
-    // expect(app.find('h2').text()).toBe('asd');
-    // app.update();
-    
-    console.log(app.text());
-  });
-  */
-
-  /*
-  test('handles axios errors', () => {
-    const wrapper = shallow(<App />);
-    console.log(wrapper.debug());
-  });
-  */
-
   each([
     [
       'player1',
